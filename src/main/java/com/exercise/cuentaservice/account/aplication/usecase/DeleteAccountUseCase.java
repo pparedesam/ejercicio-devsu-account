@@ -11,7 +11,7 @@ public class DeleteAccountUseCase implements DeleteAccountPort {
     @Autowired
     DeleteAccountRepository deleteAccountRepository;
     @Override
-    public void deleteById(Long accountId) {
-        deleteAccountRepository.deleteById(accountId);
+    public void deleteById(Long idAccount) {
+        deleteAccountRepository.deleteById(idAccount);
     }
 }

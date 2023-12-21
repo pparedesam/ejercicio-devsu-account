@@ -1,0 +1,25 @@
+package com.exercise.cuentaservice.movement.infraestructure.adapters.web;
+
+import com.exercise.cuentaservice.movement.aplication.port.GetMovementPort;
+import com.exercise.cuentaservice.movement.domain.entities.Movement;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/v1/movement")
+public class GetMovementController {
+
+    @Autowired
+    private GetMovementPort getMovementPort;
+
+    @GetMapping()
+    public ResponseEntity<List<Movement>> getMovement(){
+        List<Movement> movements = getMovementPort.execute();
+        return ResponseEntity.ok(movements);
+    }
+}
