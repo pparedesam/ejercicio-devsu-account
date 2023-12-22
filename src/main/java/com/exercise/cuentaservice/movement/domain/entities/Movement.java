@@ -1,5 +1,6 @@
 package com.exercise.cuentaservice.movement.domain.entities;
 
+import com.exercise.cuentaservice.account.domain.entities.Account;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,8 +22,12 @@ public class Movement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date date;
-    private String tipeMovement;
+    private String typeMovement;
     private BigDecimal value;
     private BigDecimal balance;
-    private Long idAccount;
+
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_account")
+    private Account account;
 }

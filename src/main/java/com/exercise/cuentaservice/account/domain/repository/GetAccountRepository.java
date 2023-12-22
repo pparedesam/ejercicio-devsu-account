@@ -8,4 +8,6 @@ public interface GetAccountRepository {
     List<Account> findAll();
 
     Account findById(Long idAccount);
+
+    String  findTopByOrderByNumberDesc();
 }

@@ -1,7 +1,8 @@
 package com.exercise.cuentaservice.account.infraestructure.adapters.web;
 
+import com.exercise.cuentaservice.account.aplication.dtos.AccountRequestDto;
+import com.exercise.cuentaservice.account.aplication.dtos.AccountResponseDto;
 import com.exercise.cuentaservice.account.aplication.port.GetAccountPort;
-import com.exercise.cuentaservice.account.domain.entities.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +19,9 @@ public class GetAccountController {
     private GetAccountPort getAccountPort;
 
     @GetMapping()
-    public ResponseEntity<List<Account>> getAccount(){
-        List<Account> accounts = getAccountPort.execute();
+    public ResponseEntity<List<AccountResponseDto>> getAccount(){
+
+        List<AccountResponseDto> accounts = getAccountPort.execute();
         return ResponseEntity.ok(accounts);
     }
 

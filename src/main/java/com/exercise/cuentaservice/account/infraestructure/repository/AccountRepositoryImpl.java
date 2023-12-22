@@ -35,6 +35,11 @@ public class AccountRepositoryImpl implements GetAccountRepository, CreateAccoun
     }
 
     @Override
+    public String findTopByOrderByNumberDesc() {
+        return accountJpaRepository.findMaxNumber();
+    }
+
+    @Override
     public Account update(Account account) {
         return accountJpaRepository.save(account);
     }

@@ -1,6 +1,8 @@
 package com.exercise.cuentaservice.movement.infraestructure.adapters.web;
 
 import com.exercise.cuentaservice.account.aplication.port.CreateAccountPort;
+import com.exercise.cuentaservice.movement.aplication.dtos.MovementRequestDto;
+import com.exercise.cuentaservice.movement.aplication.dtos.MovementResponseDto;
 import com.exercise.cuentaservice.movement.aplication.port.CreateMovementPort;
 import com.exercise.cuentaservice.movement.domain.entities.Movement;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +20,9 @@ public class CreateMovementController {
 
 
     @PostMapping
-    public ResponseEntity createMovement(@RequestBody Movement movement)
+    public ResponseEntity createMovement(@RequestBody MovementRequestDto movementRequestDto)
     {
-        createMovementPort.execute(movement);
-        return ResponseEntity.ok().build();
+        MovementResponseDto responseDto =  createMovementPort.execute(movementRequestDto);
+        return ResponseEntity.ok(responseDto);
     }
 }
