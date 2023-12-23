@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface MovementJpaRepository extends JpaRepository<Movement,Long> {
     void deleteById(Long idMovement);
 
+
+
 }

@@ -7,15 +7,13 @@ import com.exercise.cuentaservice.movement.aplication.dtos.MovementRequestDto;
 import com.exercise.cuentaservice.movement.aplication.dtos.MovementResponseDto;
 import com.exercise.cuentaservice.movement.domain.entities.Movement;
 import com.exercise.cuentaservice.movement.domain.repository.CreateMovementRepository;
-import com.exercise.cuentaservice.movement.infraestructure.exception.InssuficientBalanceException;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.*;
@@ -40,7 +38,7 @@ class CreateMovementUseCaseTest {
 
     @Test
     public void shouldCreateMovementWithSufficientBalance() {
-        // Configura los mocks y los datos de prueba
+
         MovementRequestDto requestDto = mock(MovementRequestDto.class,RETURNS_MOCKS);
         Account mockAccount = mock(Account.class,RETURNS_MOCKS);
         Movement mockMovement = mock(Movement.class,RETURNS_MOCKS);

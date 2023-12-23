@@ -1,7 +1,6 @@
 package com.exercise.cuentaservice.account.infraestructure.adapters.web;
 
 import com.exercise.cuentaservice.account.aplication.port.DeleteAccountPort;
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

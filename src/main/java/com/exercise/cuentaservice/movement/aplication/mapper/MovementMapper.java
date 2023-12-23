@@ -10,7 +10,7 @@ public class MovementMapper {
     public static MovementResponseDto movementToMovementResponseDto(Movement movement) {
         return new MovementResponseDto(
                 movement.getAccount().getNumber(),
-                movement.getAccount().getTipo(),
+                movement.getAccount().getType(),
                 movement.getBalance(),
                 movement.getAccount().getState(),
                 movement.getTypeMovement() + " de " + String.valueOf(movement.getValue().abs())

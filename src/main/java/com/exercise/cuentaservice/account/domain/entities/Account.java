@@ -21,7 +21,7 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String tipo;
+    private String type;
     private BigDecimal balance;
     private String number;
     private Boolean state;

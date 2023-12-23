@@ -1,6 +1,5 @@
 package com.exercise.cuentaservice.movement.infraestructure.repository;
 
-import com.exercise.cuentaservice.account.domain.entities.Account;
 import com.exercise.cuentaservice.movement.domain.entities.Movement;
 import com.exercise.cuentaservice.movement.domain.repository.CreateMovementRepository;
 import com.exercise.cuentaservice.movement.domain.repository.DeleteMovementRepository;

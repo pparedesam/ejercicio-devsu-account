@@ -9,7 +9,7 @@ public class AccountMapper {
     public static Account accountDtoToAccount(AccountRequestDto dto){
         return  Account.builder()
 
-                .tipo(dto.accountType())
+                .type(dto.accountType())
                 .balance(dto.initialBalance())
                 .state(dto.status())
                 .idClient(dto.idClient())
@@ -20,7 +20,7 @@ public class AccountMapper {
 
         return new AccountResponseDto(
                 account.getId(),
-                account.getTipo(),
+                account.getType(),
                 account.getBalance(),
                 account.getState(),
                 clientName,

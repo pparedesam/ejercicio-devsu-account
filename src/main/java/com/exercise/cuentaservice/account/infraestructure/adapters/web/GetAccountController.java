@@ -1,6 +1,5 @@
 package com.exercise.cuentaservice.account.infraestructure.adapters.web;
 
-import com.exercise.cuentaservice.account.aplication.dtos.AccountRequestDto;
 import com.exercise.cuentaservice.account.aplication.dtos.AccountResponseDto;
 import com.exercise.cuentaservice.account.aplication.port.GetAccountPort;
 import org.springframework.beans.factory.annotation.Autowired;

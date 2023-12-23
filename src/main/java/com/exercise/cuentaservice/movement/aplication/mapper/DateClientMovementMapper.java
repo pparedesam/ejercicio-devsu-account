@@ -11,7 +11,7 @@ public class DateClientMovementMapper {
                 movement.getDate(),
                 nameClient,
                 movement.getAccount().getId(),
-                movement.getAccount().getTipo(),
+                movement.getAccount().getType(),
                 movement.getAccount().getBalance(),
                 movement.getTypeMovement(),
                 movement.getAccount().getState(),

@@ -1,6 +1,5 @@
 package com.exercise.cuentaservice.account.aplication.usecase;
 
-import com.exercise.cuentaservice.account.aplication.dtos.AccountRequestDto;
 import com.exercise.cuentaservice.account.aplication.dtos.AccountResponseDto;
 import com.exercise.cuentaservice.account.aplication.dtos.ClientResponseDto;
 import com.exercise.cuentaservice.account.aplication.port.GetAccountPort;
@@ -39,7 +38,7 @@ public class GetAccountUseCase implements GetAccountPort {
                     }
                     return new AccountResponseDto(
                             account.getId(),
-                            account.getTipo(),
+                            account.getType(),
                             account.getBalance(),
                             account.getState(),
                             clientResponseDto.name(),

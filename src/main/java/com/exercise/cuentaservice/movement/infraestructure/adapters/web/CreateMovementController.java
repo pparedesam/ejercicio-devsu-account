@@ -1,10 +1,8 @@
 package com.exercise.cuentaservice.movement.infraestructure.adapters.web;
 
-import com.exercise.cuentaservice.account.aplication.port.CreateAccountPort;
 import com.exercise.cuentaservice.movement.aplication.dtos.MovementRequestDto;
 import com.exercise.cuentaservice.movement.aplication.dtos.MovementResponseDto;
 import com.exercise.cuentaservice.movement.aplication.port.CreateMovementPort;
-import com.exercise.cuentaservice.movement.domain.entities.Movement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
